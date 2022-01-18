@@ -106,6 +106,16 @@ public struct User: Codable {
     }
 }
 
+public struct InlineResponse200: Codable {
+    public var items: [Int]?
+    public var profiles: [String]?
+
+    public init(items: [Int]? = nil, profiles: [String]? = nil) {
+        self.items = items
+        self.profiles = profiles
+    }
+}
+
 struct StringCodingKey: CodingKey, ExpressibleByStringLiteral {
     private let string: String
     private var int: Int?
