@@ -36,7 +36,7 @@ public struct Item: Codable {
     /// A list of related pollopts, in display order.
     public var parts: [Int]?
     /// In the case of stories or polls, the total comment count.
-    public var descendants: [Int]?
+    public var descendants: Int?
 
     /// The type of item. One of "job", "story", "comment", "poll", or "pollopt".
     public enum `Type`: String, Codable, CaseIterable {
@@ -47,7 +47,7 @@ public struct Item: Codable {
         case pollopt
     }
 
-    public init(id: Int? = nil, isDeleted: Bool? = nil, type: `Type`? = nil, by: String? = nil, time: Int? = nil, text: String? = nil, isDead: Bool? = nil, parent: Int? = nil, poll: Int? = nil, kids: [Int]? = nil, url: URL? = nil, score: Int? = nil, title: String? = nil, parts: [Int]? = nil, descendants: [Int]? = nil) {
+    public init(id: Int? = nil, isDeleted: Bool? = nil, type: `Type`? = nil, by: String? = nil, time: Int? = nil, text: String? = nil, isDead: Bool? = nil, parent: Int? = nil, poll: Int? = nil, kids: [Int]? = nil, url: URL? = nil, score: Int? = nil, title: String? = nil, parts: [Int]? = nil, descendants: Int? = nil) {
         self.id = id
         self.isDeleted = isDeleted
         self.type = type
